@@ -38,7 +38,6 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-              {/* Updated Download Resume Button */}
               <Button 
                 variant="outline" 
                 size="lg"
@@ -47,12 +46,9 @@ const Hero = () => {
               >
                 Download Resume
               </Button>
-              
-              {/* Updated Contact Me Button */}
               <Button 
                 size="lg" 
                 className="bg-portfolio-purple hover:bg-portfolio-purple/90 text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-portfolio-purple/20"
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
               >
                 Contact Me
               </Button>
@@ -107,18 +103,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
-      {/* Footer section */}
-      <section id="contact" className="bg-portfolio-gray py-16">
-        <div className="container mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-          <p className="text-lg">Feel free to reach out to me via any of the channels below:</p>
-          <div className="flex justify-center gap-6 mt-8">
-            <a href="mailto:ayushkaushik307@gmail.com" className="text-portfolio-purple hover:text-portfolio-teal">Email</a>
-            <a href="tel:+919390683022" className="text-portfolio-purple hover:text-portfolio-teal">Phone</a>
-          </div>
-        </div>
-      </section>
     </section>
   );
 };
