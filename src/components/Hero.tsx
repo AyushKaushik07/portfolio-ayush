@@ -16,10 +16,11 @@ const Hero = () => {
           <div className="w-full lg:w-2/5 flex justify-center lg:justify-start">
             <div className="relative group">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-purple shadow-xl">
-                {/* Replace with actual image when uploaded */}
-                <div className="w-full h-full bg-portfolio-purple/20 flex items-center justify-center text-white">
-                  <span className="text-lg">Profile Image</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/0e761044-d6b7-4b7d-9dba-62bf2f77b3ab.png"
+                  alt="Ayush Kaushik"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-portfolio-purple to-portfolio-teal opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </div>
