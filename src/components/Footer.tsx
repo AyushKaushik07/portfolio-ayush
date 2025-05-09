@@ -23,21 +23,21 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex items-center space-x-4 mb-4">
               <a 
-                href="tel:+1234567890" 
+                href="tel:+919390683022" 
                 className="text-portfolio-gray hover:text-portfolio-purple transition-colors w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10"
                 aria-label="Phone"
               >
                 <Phone size={18} />
               </a>
               <a 
-                href="mailto:ayush.kaushik@example.com"
+                href="mailto:ayushkaushik307@gmail.com"
                 className="text-portfolio-gray hover:text-portfolio-purple transition-colors w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10"
                 aria-label="Email"
               >
                 <Mail size={18} />
               </a>
               <a 
-                href="https://github.com/ayushkaushik" 
+                href="https://github.com/AyushKaushik07" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-portfolio-gray hover:text-portfolio-purple transition-colors w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10"
@@ -46,7 +46,7 @@ const Footer = () => {
                 <Github size={18} />
               </a>
               <a 
-                href="https://linkedin.com/in/ayushkaushik" 
+                href="https://www.linkedin.com/in/ayush-kaushik-11a182267/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-portfolio-gray hover:text-portfolio-purple transition-colors w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10"

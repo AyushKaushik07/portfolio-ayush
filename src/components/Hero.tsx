@@ -56,7 +56,7 @@ const Hero = () => {
             
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a 
-                href="tel:+1234567890" 
+                href="tel:+919390683022" 
                 className={cn(
                   "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
                   "bg-white/5 hover:bg-portfolio-purple text-white hover:scale-110 hover:shadow-md"
@@ -66,7 +66,7 @@ const Hero = () => {
                 <Phone size={20} />
               </a>
               <a 
-                href="mailto:ayush.kaushik@example.com" 
+                href="mailto:ayushkaushik307@gmail.com" 
                 className={cn(
                   "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
                   "bg-white/5 hover:bg-portfolio-purple text-white hover:scale-110 hover:shadow-md"
@@ -76,7 +76,7 @@ const Hero = () => {
                 <Mail size={20} />
               </a>
               <a 
-                href="https://github.com/ayushkaushik" 
+                href="https://github.com/AyushKaushik07" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={cn(
@@ -88,7 +88,7 @@ const Hero = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/ayushkaushik" 
+                href="https://www.linkedin.com/in/ayush-kaushik-11a182267/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={cn(
