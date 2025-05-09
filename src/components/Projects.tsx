@@ -47,7 +47,7 @@ const projects: Project[] = [
       { name: 'HTML' },
       { name: 'CSS' },
     ],
-    githubUrl: 'https://github.com/AyushKaushik07/Gearvault1',
+    githubUrl: 'https://github.com/AyushKaushik07/geotracking',
     imageUrl: '/lovable-uploads/ae46e1aa-238e-405e-ad18-4f91a3b585ed.png',
   },
   {
@@ -58,7 +58,7 @@ const projects: Project[] = [
       { name: 'Swing' },
       { name: 'Maven' },
     ],
-    githubUrl: 'https://github.com/AyushKaushik07/geotracking',
+    githubUrl: 'https://github.com/AyushKaushik07/Gearvault1',
     imageUrl: '/lovable-uploads/5f973d43-bd67-483e-8051-d63c3b42d61c.png',
   },
 ];
@@ -75,7 +75,7 @@ const Projects = () => {
           {projects.map((project) => (
             <Card 
               key={project.title}
-              className="glass-card overflow-hidden flex flex-col h-full group animate-scale-in border-none"
+              className="glass-card overflow-hidden flex flex-col h-full group animate-scale-in border-none transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
             >
               <div className="h-48 bg-portfolio-purple/10 relative">
                 {project.imageUrl && (

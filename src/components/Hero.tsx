@@ -15,11 +15,11 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
           <div className="w-full lg:w-2/5 flex justify-center lg:justify-start">
             <div className="relative group">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-purple shadow-xl">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-portfolio-purple shadow-xl transition-transform duration-300 group-hover:scale-105">
                 <img 
                   src="/lovable-uploads/0e761044-d6b7-4b7d-9dba-62bf2f77b3ab.png"
                   alt="Ayush Kaushik"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-all duration-300 group-hover:brightness-110"
                 />
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-portfolio-purple to-portfolio-teal opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
@@ -42,13 +42,13 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple hover:text-white"
+                className="border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple hover:text-white transition-colors duration-300 transform hover:scale-105"
               >
                 Download Resume
               </Button>
               <Button 
                 size="lg" 
-                className="bg-portfolio-purple hover:bg-portfolio-purple/90 text-white"
+                className="bg-portfolio-purple hover:bg-portfolio-purple/90 text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-portfolio-purple/20"
               >
                 Contact Me
               </Button>
@@ -58,8 +58,8 @@ const Hero = () => {
               <a 
                 href="tel:+1234567890" 
                 className={cn(
-                  "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                  "bg-white/5 hover:bg-portfolio-purple text-white"
+                  "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
+                  "bg-white/5 hover:bg-portfolio-purple text-white hover:scale-110 hover:shadow-md"
                 )}
                 aria-label="Phone"
               >
@@ -68,8 +68,8 @@ const Hero = () => {
               <a 
                 href="mailto:ayush.kaushik@example.com" 
                 className={cn(
-                  "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                  "bg-white/5 hover:bg-portfolio-purple text-white"
+                  "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
+                  "bg-white/5 hover:bg-portfolio-purple text-white hover:scale-110 hover:shadow-md"
                 )}
                 aria-label="Email"
               >
@@ -80,8 +80,8 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={cn(
-                  "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                  "bg-white/5 hover:bg-portfolio-purple text-white"
+                  "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
+                  "bg-white/5 hover:bg-portfolio-purple text-white hover:scale-110 hover:shadow-md"
                 )}
                 aria-label="GitHub"
               >
@@ -92,8 +92,8 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={cn(
-                  "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                  "bg-white/5 hover:bg-portfolio-purple text-white"
+                  "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300",
+                  "bg-white/5 hover:bg-portfolio-purple text-white hover:scale-110 hover:shadow-md"
                 )}
                 aria-label="LinkedIn"
               >

@@ -14,13 +14,28 @@ const navItems = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   
+  // Handle scroll for sticky effect and active section
   useEffect(() => {
     const handleScroll = () => {
+      // For sticky navbar
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+      
+      // For active section highlighting
+      const sections = navItems.map(item => item.href.substring(1));
+      const scrollPosition = window.scrollY + 100;
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
       }
     };
     
@@ -28,12 +43,26 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
+  const scrollToSection = (sectionId: string, event: React.MouseEvent) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+  
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
         isScrolled 
-          ? "bg-portfolio-dark/80 backdrop-blur-lg shadow-md py-3" 
+          ? "bg-portfolio-dark/90 backdrop-blur-lg shadow-lg py-3" 
           : "bg-transparent"
       )}
     >
@@ -49,10 +78,13 @@ const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-300 hover:text-portfolio-purple transition-colors relative group"
+                onClick={(e) => scrollToSection(item.href.substring(1), e)}
+                className={cn(
+                  "text-gray-300 transition-colors relative hover-underline",
+                  activeSection === item.href.substring(1) ? "text-portfolio-purple after:w-full" : ""
+                )}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </a>
             ))}
           </div>
@@ -70,7 +102,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "md:hidden fixed inset-0 bg-portfolio-dark z-40 transform transition-transform duration-300 ease-in-out",
+            "md:hidden fixed inset-0 bg-portfolio-dark/95 backdrop-blur-lg z-40 transform transition-transform duration-300 ease-in-out",
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
@@ -79,8 +111,13 @@ const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xl text-white hover:text-portfolio-purple transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => scrollToSection(item.href.substring(1), e)}
+                className={cn(
+                  "text-xl transition-colors",
+                  activeSection === item.href.substring(1) 
+                    ? "text-portfolio-purple" 
+                    : "text-white hover:text-portfolio-purple"
+                )}
               >
                 {item.label}
               </a>
